@@ -1,6 +1,6 @@
 # NEST Project at EITN Fall School 2024
 
-This repository accompanies the NEST tutorial at the EITN Fall School in Computational Neuroscience 2022.
+This repository accompanies the NEST project at the EITN Fall School in Computational Neuroscience 2024.
 Here you can find the presentation slides, Jupyter notebooks and other materials. 
 
 ## Installation instructions
