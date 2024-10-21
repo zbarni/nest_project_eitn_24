@@ -33,7 +33,7 @@ def compute_capacity(x, z):
     reg = LinearRegression(n_jobs=-1, fit_intercept=False).fit(x.T, z)
     W_out = reg.coef_
     z_hat = np.dot(W_out, x)
-    print(f"\nElapsed time for capacity computation: {time.time() - t_start}")
+    # print(f"\nElapsed time for capacity computation: {time.time() - t_start}")
 
     # capacity = 1.0 - (np.mean((z - z_hat) ** 2) / np.var(z))  # TODO - before
     covs = np.cov(z_hat, z)[0, 1] ** 2.0
