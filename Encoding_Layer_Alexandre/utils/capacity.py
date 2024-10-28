@@ -107,6 +107,7 @@ def compute_capacity_sequential(
     enc_states,
     ex_states,
     subsampling_factor,
+    step_lag=10,
     max_lag=100.0,
     dt=0.1,
 ):
@@ -129,7 +130,7 @@ def compute_capacity_sequential(
     """
     # Adjust the maximum lag and step lag based on the subsampling factor
     max_lag_subsampled = max_lag / subsampling_factor  # in milliseconds
-    step_lag_subsampled = 10.0 / subsampling_factor  # default step is 10 ms, scaled by subsampling factor
+    step_lag_subsampled = step_lag / subsampling_factor  # default step is 10 ms, scaled by subsampling factor
 
     # Create the array of time lags (subsampled) based on max_lag and step_lag
     time_lags = np.arange(0.0, max_lag_subsampled, step_lag_subsampled)
